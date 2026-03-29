@@ -1,5 +1,5 @@
 version: 1.0
-runtime: corretto17
+runtime: corretto21
 build:
   commands:
     build:
