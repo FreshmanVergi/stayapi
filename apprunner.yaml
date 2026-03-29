@@ -5,7 +5,7 @@ build:
     build:
       - mvn clean package -DskipTests
 run:
-  command: java -jar target/stayapi-0.0.1-SNAPSHOT.jar
+  command: java -Xms256m -jar target/stayapi-0.0.1-SNAPSHOT.jar
   network:
     port: 8080
   env:
@@ -14,6 +14,6 @@ run:
     - name: DB_USERNAME
       value: postgres
     - name: DB_PASSWORD
-      value: Berker123!
+      value: Berker123!.
     - name: JWT_SECRET
       value: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
