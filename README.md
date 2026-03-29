@@ -7,7 +7,7 @@
 ## 🔗 Links
 | | URL |
 |---|---|
-| **GitHub** | https://github.com/YOUR_USERNAME/stayapi |
+| **GitHub** | https://github.com/FreshmanVergi/stayapi |
 | **Swagger (deployed)** | https://YOUR_APP_RUNNER_URL/swagger-ui.html |
 | **Video** | https://drive.google.com/your-video-link |
 
