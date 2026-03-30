@@ -8,7 +8,7 @@
 | | URL |
 |---|---|
 | **GitHub** | https://github.com/FreshmanVergi/stayapi |
-| **Swagger (deployed)** | [https://YOUR_APP_RUNNER_URL/swagger-ui.html](http://stayapi-env.eba-ruyp7rkn.eu-central-1.elasticbeanstalk.com/swagger-ui/index.html) |
+| **Swagger (deployed)** | http://stayapi-env.eba-ruyp7rkn.eu-central-1.elasticbeanstalk.com/swagger-ui/index.html |
 | **Video** | https://drive.google.com/your-video-link |
 
 ---
