@@ -9,7 +9,7 @@
 |---|---|
 | **GitHub** | https://github.com/FreshmanVergi/stayapi |
 | **Swagger (deployed)** | http://stayapi-env.eba-ruyp7rkn.eu-central-1.elasticbeanstalk.com/swagger-ui/index.html |
-| **Video** | https://drive.google.com/your-video-link |
+| **Video** | [https://drive.google.com/your-video-link ](https://drive.google.com/file/d/1iot8iYAKuXLv41xwaqleQjU9s0MYUHLA/view?usp=sharing)|
 
 ---
 
