@@ -41,6 +41,7 @@ public class SecurityConfig {
                 // Bookings
                 .requestMatchers(HttpMethod.POST, "/api/v1/bookings").hasRole("GUEST")
                 .requestMatchers(HttpMethod.GET, "/api/v1/bookings/my").hasRole("GUEST")
+                .requestMatchers(HttpMethod.DELETE, "/api/v1/bookings/**").hasRole("GUEST")
 
                 // Reviews
                 .requestMatchers(HttpMethod.POST, "/api/v1/reviews").hasRole("GUEST")

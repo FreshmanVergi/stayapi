@@ -82,7 +82,6 @@ public class BookingService {
                 .build();
     }
 
-    // NEW: list my bookings (paged)
     public Page<BookingResponseDTO> getMyBookings(String username, int page) {
         User guest = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
@@ -97,5 +96,20 @@ public class BookingService {
                         .dateTo(b.getDateTo().toString())
                         .guestNames(b.getGuestNames())
                         .build());
+    }
+
+    @Transactional
+    public void cancelBooking(Long bookingId, String username) {
+        User guest = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        Booking booking = bookingRepository.findByIdAndGuestId(bookingId, guest.getId())
+                .orElseThrow(() -> new RuntimeException("Booking not found or does not belong to you"));
+
+        if (booking.getDateFrom().isBefore(LocalDate.now())) {
+            throw new RuntimeException("Cannot cancel a booking that has already started or passed");
+        }
+
+        bookingRepository.delete(booking);
     }
 }

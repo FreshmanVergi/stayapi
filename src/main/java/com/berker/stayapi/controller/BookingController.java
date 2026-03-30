@@ -43,4 +43,14 @@ public class BookingController {
         return ResponseEntity.ok(ApiResponse.success("Bookings retrieved",
                 bookingService.getMyBookings(auth.getName(), page)));
     }
+
+    @DeleteMapping("/{bookingId}")
+    @Operation(summary = "Cancel a booking (GUEST only, only future bookings)",
+               security = @SecurityRequirement(name = "bearerAuth"))
+    public ResponseEntity<ApiResponse<Void>> cancelBooking(
+            @PathVariable Long bookingId,
+            Authentication auth) {
+        bookingService.cancelBooking(bookingId, auth.getName());
+        return ResponseEntity.ok(ApiResponse.success("Booking cancelled successfully", null));
+    }
 }
